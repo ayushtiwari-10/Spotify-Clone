@@ -1,0 +1,387 @@
+body {
+      font-family: "Montserrat", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 600;
+      font-style: normal;
+      margin: 0;
+      color: whitesmoke;
+      background-color: black;
+      overflow: hidden;
+    }
+    .main{
+        display: flex;
+        height: 100vh;
+        padding: 0.5rem;
+    }
+    .sidebar{
+        background-color: black;
+        width: 340px;
+        border-radius: 1rem;/*16px*/
+        margin-right: 0.5rem;
+    }
+    .maincontent{
+        background-color: #121212;
+        flex: 1;/*asks for the remaining space that is left*/ 
+        border-radius: 1rem;/*16px*/
+        overflow: auto;/* auro overflow means jab content hoga
+        tab hi scroll hoga */
+        padding: 0 1.5rem 0 1.5rem;
+    }
+    .musicplayer{
+        background-color: #000000;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        height: 72px;
+    }
+    a{
+        text-decoration: none;
+        color: white;
+    }
+    .nav{
+        background-color: #121212;
+        border-radius: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100px;
+        padding: 0.5rem 0.75rem;
+    }
+    .fa-brandsfa-spotify{
+        font-size: large;
+    }
+    .option{
+       line-height: 2.5rem;
+       opacity: 0.7;
+       padding: 0.5rem;
+    }
+    .option:hover{
+        opacity: 1;
+    }
+    .option i {
+        font-size: 1.25rem;
+    }
+    .option a{
+        font-size: 1rem;
+        margin-left: 1rem;
+    }
+    .library{
+        background-color: #121212;
+        border-radius: 1rem;
+        height: 100%;
+        margin-top: 0.5rem;
+        padding: 0.5rem 0.75rem;
+    }
+    .Options{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .liboption img{
+        height: 1.25rem;
+        width: 1.25rem;
+    }
+    .icons{
+        font-size: 1.25rem;
+        opacity: 0.7;
+        margin-right: 1rem;
+        display: flex;
+    }
+    .icons i{
+        opacity: 0.7;
+        margin-right: 1rem;
+    }
+    .icons:hover{
+        opacity: 1;
+    }
+    .box1{
+        background-color: #232323;
+        height: 8rem;
+        border-radius: 0.75rem;
+        margin: 1rem 0 1.75rem 0;
+        padding: 1rem 1.25rem;
+    }
+    .boxp1{
+        font-size: 1rem;
+        font-weight: 700;
+    }
+    .boxp2{
+        font-size: 0.85rem;
+        opacity: 0.9;
+    }
+    .badge{
+        background-color: #fff;
+ /*       height: 100px;
+        width: 100px;*/
+        border-radius: 100px;
+        padding: 0.25rem 1rem;
+        font-weight: 700;
+        margin-top: 0.5rem;
+        height: 2rem;
+        width: fit-content;
+    }
+    .box2{
+        background-color: #232323;
+        height: 10rem;
+        border-radius: 0.75rem;
+        margin: 1rem 0 1rem 0;
+        padding: 1rem 1.25rem;
+    }
+    .boxp3{
+        font-size: 1rem;
+        font-weight: 700;
+    }
+    .boxp4{
+        font-size: 0.85rem;
+        opacity: 0.9;
+    }
+    .stickynav{
+        position: sticky;
+        top: 0;
+        background-color: #121212 /*#232323*/;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 0 1rem 0;
+        z-index: 10;
+    }
+    .stickyicons{
+        margin-left: 0.75rem;
+    }
+    .stickyoption{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .navitem{
+        margin-right: 1rem;
+    }
+    .darkbadge{
+        background-color: black;
+        color: white;
+    }
+    @media (max-width:1000px){
+        .hide{
+            display: none;
+        }
+    }
+    .card{
+        background-color: #232323;
+        height: auto;
+        width: 150px;
+        border-radius: 0.5rem;
+        padding: 1rem;
+        margin-left: 1.5rem;
+        margin-top: 1rem;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    .cards-container{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    .card-img{
+        width: 100%;
+        border-radius: 0.5rem;
+    }
+    .cardtitle{
+        font-weight: 600;
+    }
+    .cardinfo{
+        font-size: 0.85rem;
+        opacity: 0.5;
+    }
+    .footer{
+        height: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .play-button {
+        position: absolute;
+        top: 105px;
+        right: 25px;
+        background-color: #1DB954;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity 0.3s ease; /* Add transition for opacity */
+        z-index: 10;
+    }
+    
+    .play-button i {
+        color: rgb(0, 0, 0);
+        font-size: 20px;
+    }
+    
+    .card:hover {
+        background-color: #2e2e2e; /* Lighten the background color */
+        /*transform: scale(1.05); /* Slightly enlarge the card */
+    }
+    
+    .card:hover .play-button {
+        opacity: 1;
+    }
+    .musicplayer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 80px;
+        background-color: #121212;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 20px;
+    }
+    
+    .album-info {
+        display: flex;
+        align-items: center;
+        width: 25%;
+    }
+    
+    .album-info img {
+        width: 60px;
+        height: 60px;
+        border-radius: 5px;
+        margin-right: 20px;
+    }
+    
+    .album-details {
+        color: white;
+    }
+    
+    .player-controls{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .player{
+        width: 50%;
+    }
+    .player-control-icon{
+        height: 1rem;
+        margin-right: 1.75rem;
+        opacity: 0.7;
+    }
+    .player-control-icon:hover{
+        opacity: 1;
+    
+    }
+    .playback-bar{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .progress-bar{
+        width: 70%;
+        appearance: none;
+        background-color: transparent;
+        cursor: pointer ;
+    }
+    .progress-bar::-webkit-slider-runnable-track{
+        background-color: #ddd;
+        border-radius: 100px;
+        height: 0.2rem;
+    }
+    .progress-bar::-webkit-slider-thumb{
+        appearance: none;
+        height: 1rem;
+        width: 1rem;
+        background-color: #1bd760;
+        border-radius: 50%;
+        margin-top: -6px;
+    }
+    .player-control-icon{
+        margin-left: 2rem;
+    }
+    .controls {
+        display: flex;
+        align-items: center;
+        color: white;
+        width: 25%;
+    }
+    
+    .controls i {
+        margin-right: 15px;
+        cursor: pointer;
+    }
+    
+    .controls i:hover {
+        color: #1db954; /* Green color */
+    }
+    .artist{
+        opacity: 0.5;
+    }
+    .album-details a:hover{
+        text-decoration: underline;
+    }
+    .controls {
+        display: flex;
+        align-items: center;
+    }
+    
+    .controls-icon {
+        width: 30px; /* Adjust according to your icon size */
+        height: auto;
+        margin-right: 5px;
+    }
+    
+    .volume-control {
+        display: flex;
+        align-items: center;
+        margin-left: 5px; /* Adjust spacing between icons and volume control */
+    }
+    
+    .volume-icon {
+        width: 20px; /* Adjust according to your icon size */
+        height: auto;
+        margin-right: 5px;
+    }
+    
+    .volume-slider {
+        width: 100px; /* Adjust width of the volume slider */
+        -webkit-appearance: none;
+        appearance: none;
+        height: 5px;
+        background: #ccc;
+        border-radius: 5px;
+        outline: none;
+    }
+    
+    .volume-slider::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 12px; /* Adjust size of the slider thumb */
+        height: 12px;
+        background: #1db954; /* Adjust color of the slider thumb */
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    
+    .volume-slider::-moz-range-thumb {
+        width: 12px; /* Adjust size of the slider thumb */
+        height: 12px;
+        background: #1db954; /* Adjust color of the slider thumb */
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    .musicplayer{
+        background: #000;
+    }
+    .line{
+        width: 90%;
+        height: 50%;
+        border-top: 1px solid white;
+        opacity: 0.4;
+    }
